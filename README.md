@@ -7,3 +7,25 @@ In xml,just use it as NestedScrollView.
 In code,remember to setNestedScrollingEnabled to false that any view can nested scroll,as follows  
 recyclerView.setNestedScrollingEnabled(false);  
 You can set the distance of overscroll by setOverScrollY().
+
+### xml:
+<com.huchenhao.overnestedscrollview.base.OverNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbarStyle="outsideOverlay"
+    android:scrollbars="vertical"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</com.huchenhao.overnestedscrollview.base.OverNestedScrollView>
+
+### code:
+recyclerView.setNestedScrollingEnabled(false);
